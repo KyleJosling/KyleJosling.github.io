@@ -4,6 +4,12 @@
 
 /*Some more stuff*/
 
+.projectPageImage{
+
+	height:400px;
+	width:auto;
+	border-radius:5px;
+}
 .projectImg {
 	height:200px;
 	width:auto;
@@ -12,7 +18,6 @@
   position: relative;
 	border-radius:10px;
 }
-
 
 .img__overlay {
 	display:inline-block;
@@ -2873,6 +2878,13 @@
 				font-size: 12pt;
 			}
 
+			#main {
+				/*margin-left: 30%;
+				max-width: none;*/
+				padding-top:6em;
+				/*width: calc(100% - 50%);*/
+			}
+
 	}
 
 /* Large */
@@ -2882,7 +2894,7 @@
 		/* Header */
 
 			#header {
-				padding: 6em 3em 3em 3em;
+				padding: 3em 3em 3em 3em;
 				width: 30%;
 			}
 
@@ -2914,7 +2926,7 @@
 			#main {
 				margin-left: 30%;
 				max-width: none;
-				padding: 6em 3em 3em 3em;
+				padding: 3em 3em 3em 3em;
 				width: calc(100% - 30%);
 			}
 
@@ -2995,7 +3007,7 @@
 
 			#main {
 				margin: 0;
-				padding: 6em 4em;
+				padding: 4em 4em;
 				width: 100%;
 			}
 

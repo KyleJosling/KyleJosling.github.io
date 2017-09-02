@@ -10,7 +10,7 @@
 	</head>
 	<body id="top">
 			<header id="header">
-				<a href="#" class="image avatar"><img src="images/me.jpg" alt="" /></a>
+				<a href="index.html" class="image avatar"><img src="images/me.jpg" alt="" /></a>
 				<h1><strong>
 					Hi! I'm Kyle Josling.<br /></strong>
 					I am a developer,<br/>
@@ -27,6 +27,20 @@
 
 			<div id="main">
 
+				<section id="one">
+					<header class="major">
+						<h2> Face Tracking Drone</h2>
+					</header>
+					<img src="images/flyingdrone2.png" class="projectPageImage">
+				</section>
+
+					<section id="two">
+					<h3> Overview </h3>
+					<p> This project was created with the goal of making an autonomous drone that could detect and follow human faces.</p>
+					<p>After I decided to build a drone from scratch using an Arduino UNO as the flight controller, I decided to take on a bit more of a challenge. I used a Raspberry Pi with OpenCV for the computer vision component of the project. I used SPI communication to interface the Raspberry Pi and the Arduino. The Raspberry Pi detects and tracks faces and sends the position to the Arduino via the SPI protocol. Based on the position of the face in the frame, the drone is send commands to place the face in the middle of the image frame.</p>
+
+				</section>
+
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
@@ -34,6 +48,8 @@
 					<li><a href="https://github.com/KyleJosling" class="icon fa-github" target="_blank"><span class="label">Github</span></a></li>
 				</ul>
 			</footer>
+
+
 
 			<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
