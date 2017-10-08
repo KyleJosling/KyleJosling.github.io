@@ -9,6 +9,12 @@
 	height:400px;
 	width:auto;
 	border-radius:5px;
+	image-orientation: from-image;
+
+}
+.anotherPageImage{
+	height:200px;
+	border-radius:5px;
 }
 .projectImg {
 	height:200px;
