@@ -2130,6 +2130,7 @@
 			}
 
 			.image.avatar img {
+				transform: rotate(90deg);
 				border-radius: 100%;
 				width: 100%;
 			}
@@ -2538,7 +2539,6 @@
 		}
 
 		#header .image.avatar {
-			/*transform: rotate(90deg);*/
 			margin: 0 0 1em 0;
 			width: 8em;
 		}
