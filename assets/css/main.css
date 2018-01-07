@@ -2130,6 +2130,9 @@
 			}
 
 			.image.avatar img {
+				-webkit-transform:rotate(10deg);
+-moz-transform:rotate(10deg);
+-o-transform:rotate(10deg); 
 				transform: rotate(90deg);
 				border-radius: 100%;
 				width: 100%;
