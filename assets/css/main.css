@@ -2538,8 +2538,9 @@
 		}
 
 		#header .image.avatar {
+			transform: rotate(90deg);
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 8em;
 		}
 
 /* Footer */
