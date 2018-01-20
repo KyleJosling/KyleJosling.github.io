@@ -44,11 +44,11 @@
 			<h3> Goal </h3>
 			<p> Create an autonomous drone that can detect and follow human faces.</p>
 			<h3> Timeline </h3>
-			<p> June 2017 - Present (Waiting on parts. Flight test soon)</p>
+			<p> June 2017 - Present (Testing very soon) </p>
 			<h3> Overview </h3>
 			<p> Code for this project is<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a>.</p>
-			<p>After I decided to build a drone from scratch using an Arduino UNO as the flight controller, I decided to take on a bit more of a challenge. I used a Raspberry Pi with OpenCV for the computer vision component of the project. I used SPI communication
-				to interface the Raspberry Pi and the Arduino. The Raspberry Pi detects and tracks faces and sends the position to the Arduino via the SPI protocol. Based on the position of the face in the frame, the drone is sent commands to move so as to place the face in the
+			<p>After I decided to build a drone from scratch using an Arduino UNO as the flight controller, I decided to take on a bit more of a challenge. I used a Raspberry Pi with OpenCV for the computer vision component of the project. I used serial communication
+				to interface the Raspberry Pi and the Arduino. The Raspberry Pi detects and tracks faces and sends the position to the Arduino via the Multiwii Serial Protocol. Based on the position of the face in the frame, the drone is sent commands by a PID controller to move so as to place the face in the
 				middle of the image frame.</p>
 
 			<h3> Technologies Used </h3>
@@ -119,7 +119,7 @@
 		<!-- Footer -->
 		<footer id="footer">
 			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/kylejosling/" class="icon fa-linkedin" target="_blank"><span class="label">Twitter</span></a></li>
+				<li><a href="https://www.linkedin.com/in/kylejosling/" class="icon fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
 				<li><a href="https://github.com/KyleJosling" class="icon fa-github" target="_blank"><span class="label">Github</span></a></li>
 			</ul>
 		</footer>
