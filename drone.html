@@ -32,7 +32,7 @@
 
 		<section id="one">
 			<header class="major">
-				<h2> Face Tracking Drone</h2>
+				<h2> Object Tracking Drone</h2>
 			</header>
 			<img src="images/flyingdrone2.png" class="projectPageImage">
 			<img src="images/drone.jpg" class="projectPageImage">
@@ -42,22 +42,30 @@
 		<section id="two">
 
 			<h3> Goal </h3>
-			<p> Create an autonomous drone that can detect and follow human faces.</p>
+			<p> Create an autonomous drone from scratch that can detect and follow coloured objects.</p>
 			<h3> Timeline </h3>
-			<p> June 2017 - Present (Testing very soon) </p>
+			<p> June 2017 - Present<br>
+			    <h4> The Journey This Far: </h4>
+					<li> Build drone from scratch </li>
+					<li> Get drone to fly </li>
+					<li> Code face detection program in Python </li>
+					<li> Realize Python is too slow, rewrite all code in C++ </li>
+					<li> Realize face detection is too computationally expensive to do on a Raspberry Pi in real time</li>
+					<li> Decide to track coloured objects instead of faces because it's possible</li>
+			</p>
 			<h3> Overview </h3>
 			<p> Code for this project is<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a>.</p>
 			<p>After I decided to build a drone from scratch using an Arduino UNO as the flight controller, I decided to take on a bit more of a challenge. I used a Raspberry Pi with OpenCV for the computer vision component of the project. I used serial communication
-				to interface the Raspberry Pi and the Arduino. The Raspberry Pi detects and tracks faces and sends the position to the Arduino via the Multiwii Serial Protocol. Based on the position of the face in the frame, the drone is sent commands by a PID controller to move so as to place the face in the
-				middle of the image frame.</p>
+				to interface the Raspberry Pi and the Arduino. The Raspberry Pi detects and objects and sends the position to the Arduino via the Multiwii Serial Protocol. Based on the position of object in the frame, PID controllers move the drone so as to place the object in the
+				middle of the image frame, at a certain distance away. </p>
 
 			<h3> Technologies Used </h3>
 			<li>OpenCV</li>
-			<li>Python</li>
+			<li>C++</li>
 			<li>MultiWii</li>
 			<li>Arduino</li>
 			<li>Raspberry Pi </li>
-			<li> Rapid prototyping </li>
+			<li>Rapid prototyping </li>
 
 			<br>
 
