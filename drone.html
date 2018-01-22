@@ -47,18 +47,22 @@
 			<p> June 2017 - Present<br>
 			    <h4> The Journey This Far: </h4>
 					<li> Build drone from scratch </li>
-					<li> Get drone to fly </li>
-					<li> Decide I want to make this thing follow faces </li>
+					<li> Get drone to fly, decide I want to make this thing follow faces </li>
 					<li> Code face detection program in Python </li>
 					<li> Realize Python is too slow, rewrite all code in C++ </li>
 					<li> Realize face detection is too computationally expensive to do on a Raspberry Pi in real time</li>
 					<li> Decide to track coloured objects instead of faces because it's possible</li>
+					<li> Start testing (now) </li>
 			</p>
 			<h3> Overview </h3>
 			<p> Code for this project is<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a>.</p>
 			<p>After I decided to build a drone from scratch using an Arduino UNO as the flight controller, I decided to take on a bit more of a challenge. I used a Raspberry Pi with OpenCV for the computer vision component of the project. I used serial communication
 				to interface the Raspberry Pi and the Arduino. The Raspberry Pi detects and objects and sends the position to the Arduino via the Multiwii Serial Protocol. Based on the position of object in the frame, PID controllers move the drone so as to place the object in the
 				middle of the image frame, at a certain distance away. </p>
+
+				<h3> First Test </h3>
+				<p> This is the first test of the drone. Only the yaw PID controller is active. I'm going to build a test rig to tune the parameters, and then do a flight test. </p>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/tss9761EzTk" frameborder="0" style="padding-bottom:20px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 			<h3> Technologies Used </h3>
 			<li>OpenCV</li>
@@ -69,7 +73,6 @@
 			<li>Rapid prototyping </li>
 
 			<br>
-
 			<h3> Wiring Diagram </h3>
 			<img src="images/QuadCopterCircuit_bb.jpg" class="projectPageImage mx-auto d-block">
 			<table>
