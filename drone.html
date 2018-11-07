@@ -57,7 +57,7 @@
 			<h3> Overview </h3>
 			<p> Code for this project is<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a>.</p>
 			<p>After I decided to build a drone from scratch using an Arduino UNO as the flight controller, I decided to take on a bit more of a challenge. I used a Raspberry Pi with OpenCV for the computer vision component of the project. I used serial communication
-				to interface the Raspberry Pi and the Arduino. The Raspberry Pi detects and objects and sends the position to the Arduino via the Multiwii Serial Protocol. Based on the position of object in the frame, PID controllers move the drone so as to place the object in the
+				to interface the Raspberry Pi and a BetaFlight flight controller, which is much more stable than the Arduino was. The Raspberry Pi detects and objects and sends the position to the flight controller via the Multiwii Serial Protocol. Based on the position of object in the frame, PID controllers move the drone so as to place the object in the
 				middle of the image frame, at a certain distance away. </p>
 
 				<h3> First Test </h3>
@@ -68,55 +68,11 @@
 			<li>OpenCV</li>
 			<li>C++</li>
 			<li>MultiWii</li>
-			<li>Arduino</li>
+			<li>BetaFlight flight controller</li>
 			<li>Raspberry Pi </li>
 			<li>Rapid prototyping </li>
 
 			<br>
-			<h3> Wiring Diagram </h3>
-			<img src="images/QuadCopterCircuit_bb.jpg" class="projectPageImage mx-auto d-block">
-			<table>
-				<tr>
-					<th>Arduino Pin</th>
-					<th>Corresponding Pin</th>
-				</tr>
-				<tr>
-					<th>11 (MOSI)</th>
-					<th>RPI 19 (MOSI)</th>
-				</tr>
-				<tr>
-					<th>13 (SCLK)</th>
-					<th>RPI 23 (SCLK)</th>
-				</tr>
-				<tr>
-					<th>6</th>
-					<th>Front Left ESC</th>
-				</tr>
-				<tr>
-					<th>5</th>
-					<th>Front Right ESC</th>
-				</tr>
-				<tr>
-					<th>3</th>
-					<th>Back Left ESC</th>
-				</tr>
-				<tr>
-					<th>9</th>
-					<th>Back Right ESC</th>
-				</tr>
-				<tr>
-					<th>A4</th>
-					<th>MPU6050 SDA ESC</th>
-				</tr>
-				<tr>
-					<th>A5</th>
-					<th>MPU6050 SCL</th>
-				</tr>
-				<tr>
-					<th>2</th>
-					<th>PPM Input from receiver</th>
-				</tr>
-			</table>
 
 			<h3> 3D Printed Camera Case </h3>
 			<img src="images/CameraCase.JPG" class="projectPageImage mx-auto d-block">
