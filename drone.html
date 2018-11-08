@@ -48,25 +48,23 @@
 			    <h4> The Journey This Far: </h4>
 					<li> Build drone from scratch </li>
 					<li> Get drone to fly, decide I want to make this thing follow faces </li>
-					<li> Code face detection program in Python </li>
-					<li> Realize Python is too slow, rewrite all code in C++ </li>
-					<li> Realize face detection is too computationally expensive to do on a Raspberry Pi in real time</li>
-					<li> Decide to track coloured objects instead of faces because it's possible</li>
+					<li> Code face detection program in Python, then in C++ </li>
+					<li> Switch to detection of objects instead of faces because face detection can't run in real time on a Pi</li>
 					<li> Start testing (now) </li>
 			</p>
 			<h3> Overview </h3>
 			<p> Code for this project is<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a>.</p>
 			<p>After I decided to build a drone from scratch using an Arduino UNO as the flight controller, I decided to take on a bit more of a challenge. I used a Raspberry Pi with OpenCV for the computer vision component of the project. I used serial communication
-				to interface the Raspberry Pi and a BetaFlight flight controller, which is much more stable than the Arduino was. The Raspberry Pi detects and objects and sends the position to the flight controller via the Multiwii Serial Protocol. Based on the position of object in the frame, PID controllers move the drone so as to place the object in the
+				to interface the Raspberry Pi and (now) a BetaFlight flight controller, which is much more stable than the Arduino was. The Raspberry Pi detects and objects and sends the position to the flight controller via the Multiwii Serial Protocol. Based on the position of object in the frame, PID controllers move the drone so as to place the object in the
 				middle of the image frame, at a certain distance away. </p>
 
 				<h3> First Test </h3>
-				<p> This is the first test of the drone. Only the yaw PID controller is active. I'm going to build a test rig to tune the parameters, and then do a flight test. </p>
+				<p> This is the first test of the drone I did, using an Arduino Uno, before I switched to a real flight controller. Only the yaw PID is active. Since then I've rewrote most of the code, and am flight testing soon. </p>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/tss9761EzTk" frameborder="0" style="padding-bottom:20px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 			<h3> Technologies Used </h3>
 			<li>OpenCV</li>
-			<li>C++</li>
+			<li>Multithreading in C++</li>
 			<li>MultiWii</li>
 			<li>BetaFlight flight controller</li>
 			<li>Raspberry Pi </li>
@@ -74,8 +72,11 @@
 
 			<br>
 
-			<h3> 3D Printed Camera Case </h3>
+			<h3> 3D Printed Designs </h3>
+			<img src="images/Pi-Battery-Assem.PNG" class="projectPageImage mx-auto d-block">
+			<p> Raspberry Pi case and battery case assembly. The battery case sits on the bottom of the quad and is slotted so the centre of gravity can be adjusted. </p>
 			<img src="images/CameraCase.JPG" class="projectPageImage mx-auto d-block">
+			<p> Raspberry Pi Camera case that is mounted on the front of the quad.</p>
 
 			<h3> More Pics </h3>
 			<img src="images/droneSansRPI.jpg" class="anotherPageImage mx-auto d-block">
