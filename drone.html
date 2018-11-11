@@ -50,37 +50,40 @@
 					<li> Get drone to fly, decide I want to make this thing follow faces </li>
 					<li> Code face detection program in Python, then in C++ </li>
 					<li> Switch to detection of objects instead of faces because face detection can't run in real time on a Pi</li>
-					<li> Start testing (now) </li>
+					<li> Start testing and tuning stuff (now) </li>
 			</p>
 			<h3> Overview </h3>
-			<p> Code for this project is<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a>.</p>
+			<p> Code and CAD models for this project are<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a>. I'm trying to wrap this project up before the new year.</p>
 			<p>After I decided to build a drone from scratch using an Arduino UNO as the flight controller, I decided to take on a bit more of a challenge. I used a Raspberry Pi with OpenCV for the computer vision component of the project. I used serial communication
 				to interface the Raspberry Pi and (now) a BetaFlight flight controller, which is much more stable than the Arduino was. The Raspberry Pi detects and objects and sends the position to the flight controller via the Multiwii Serial Protocol. Based on the position of object in the frame, PID controllers move the drone so as to place the object in the
 				middle of the image frame, at a certain distance away. </p>
-
-				<h3> First Test </h3>
-				<p> This is the first test of the drone I did, using an Arduino Uno, before I switched to a real flight controller. Only the yaw PID is active. Since then I've rewrote most of the code, and am flight testing soon. </p>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/tss9761EzTk" frameborder="0" style="padding-bottom:20px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+			
 			<h3> Technologies Used </h3>
 			<li>OpenCV</li>
 			<li>Multithreading in C++</li>
-			<li>MultiWii</li>
 			<li>BetaFlight flight controller</li>
 			<li>Raspberry Pi </li>
-			<li>Rapid prototyping </li>
-
+			<li>CAD and 3D printing</li>
 			<br>
-
-			<h3> 3D Printed Designs </h3>
+			<h2> Project Log</h2>
+			<h3> Testing V2 and Tuning PID Controllers (11/11/2018) </h3>
+			<p> So now that the software is pretty much complete, I spent the weekend tuning the PID controllers for all axes and the altitude hold mode. Since the software only controls the pitch and yaw components of the drone, the drone should be able to hover almost still, especially in the roll and Z directions, which aren't controlled by software.</p>
+			<p> The drone is flying super well with the new flight controller and better centre of gravity. Planning on testing an autonomous hover sometime this week, to get an appropriate height for the drone. </p>
+			<h3> Designing new Components (10/19/2018)</h3>
+			<p> I realized if this things gonna fly well, it needs a lower and more centred centre of gravity. See CAD models and pictures below.</p> 
 			<img src="images/Pi-Battery-Assem.PNG" class="projectPageImage mx-auto d-block">
-			<p> Raspberry Pi case and battery case assembly. The battery case sits on the bottom of the quad and is slotted so the centre of gravity can be adjusted. </p>
-			<img src="images/CameraCase.JPG" class="projectPageImage mx-auto d-block">
-			<p> Raspberry Pi Camera case that is mounted on the front of the quad.</p>
+			<img src="images/IMG_2038.jpg" class="projectPageImage mx-auto d-block">
 
-			<h3> More Pics </h3>
-			<img src="images/droneSansRPI.jpg" class="anotherPageImage mx-auto d-block">
-			<img src="images/wDrone.jpg" class="anotherPageImage mx-auto d-block">
+			<h3> Software Rebuild (9/26/2018) </h3>
+			<p> Made the software WAY better using CMake as a build tool (I was using g++ before smh). I realized my motor control loop needed to run faster as well for the new flight controller, so I wrote a multithreaded program where one thread handles image processing and one thread handles the motor control. I'm getting about 30fps with this new software!</p>
+			<h3> New Flight Controller (08/15/2018) </h3>
+			<p> Took a break from this project for a while. After attempting to make a new flight controller out of an Arduino Nano, sensors and a protoboard, I found that the thing was way less stable then I wanted it to be. I was getting a lot of I2C errors and sensor problems. I decided to bite the bullet and buy a BetaFlight controller. This is a 32 bit controller instead of an 8 bit one, which means its much more stable. It also has an onboard gyro/accelerometer/barometer.</p> 
+			<img src="images/IMG_2016.jpg" class="projectPageImage mx-auto d-block">
+			<img src="images/IMG_2015.jpg" class="projectPageImage mx-auto d-block">
+			<p> RIP :(. I liked the idea of almost the whole drone being built from scratch, including the flight controller, but some things are better off bought. I might do a PCB design of a flight controller in the future.</p> 
+			<h3> First Test (21/01/2018) </h3>
+			<p> This is the first test of the drone I did, using an Arduino Uno, before I switched to a real flight controller. Only the yaw PID is active. </p>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/tss9761EzTk" frameborder="0" style="padding-bottom:20px" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 		</section>
