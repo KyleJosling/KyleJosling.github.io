@@ -12,9 +12,21 @@
 	image-orientation: from-image;
 
 }
+.projectOverlayImage{
+
+	width:100%;
+	border-radius:5px;
+}
 .anotherPageImage{
 	height:400px;
 	border-radius:5px;
+}
+.rotateImg {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 .projectImg {
 	height:200px;
