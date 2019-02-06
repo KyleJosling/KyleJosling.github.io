@@ -53,7 +53,7 @@
 					<li> Start testing and tuning stuff (now) </li>
 			</p>
 			<h3> Overview </h3>
-			<p> Code and CAD models for this project are<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a>. I'm trying to wrap this project up before the new year.</p>
+			<p> Code and CAD models for this project are<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a>.</p>
 			<p>After I decided to build a drone from scratch using an Arduino UNO as the flight controller, I decided to take on a bit more of a challenge. I used a Raspberry Pi with OpenCV for the computer vision component of the project. I used serial communication
 				to interface the Raspberry Pi and (now) a BetaFlight flight controller, which is much more stable than the Arduino was. The Raspberry Pi detects and objects and sends the position to the flight controller via the Multiwii Serial Protocol. Based on the position of object in the frame, PID controllers move the drone so as to place the object in the
 				middle of the image frame, at a certain distance away. </p>
@@ -66,6 +66,12 @@
 			<li>CAD and 3D printing</li>
 			<br>
 			<h2> Project Log</h2>
+			<h3> AR Drone and knowing when to give up (for now) (2/4/2018) </h3>
+			<p> Since it started snowing, haven't been able to test the drone a lot since November. In the meantime though, I bought an AR drone. I plan on implementing the same object tracking algorithm using their API. The AR drone removes the difficulties of achieving a stable hover and lets me focus on the image processing and tracking algorithms. After I'm done doing that, I may shelve this project for now. </p>
+			<p> I don't think this project was a waste of time. But when I started it almost two years ago, I had no idea how much work it would entail. I barely knew anything about control systems for UAVs, computer vision, embedded systems, 3D printing or multithreaded programs. I don't think I fully grasped how challenging a project like this was. My attitude was to build everything from scratch and essentially reinvent the wheel with this project (I built a <b>flight controller</b> from scratch!) At this point I've realised that to make this drone truly autonomous, I'll probably need more sensors - an optical flow sensor to keep the drone at a stable hover, as well as implementing an ultrasonic sensor and probably getting a new flight controller. This will probably cost 100s of dollars. </p>
+         <p> I guess what I'm trying to say is as time went on, this project went from being a passion of mine to a burden I always had on my shoulders. I spent a lot of time and money on it, so I wanted to finish it. When we are growing up, we are always told to never give up, but I don't think that statement always rings true. I started this project to learn, and I learned so much! I want to put my time into other projects that I'm more passionate about right now. </p>
+         <p> I'd still like to maybe implement a cheap optical flow sensor and an ultrasonic sensor to achieve a stable hover, but that may not happen until later on. The next update will be a video of the AR drone following objects. </p>
+			<p> </p>
 			<h3> Testing V2 and Tuning PID Controllers (11/11/2018) </h3>
 			<p> So now that the software is pretty much complete, I spent the weekend tuning the PID controllers for all axes and the altitude hold mode. Since the software only controls the pitch and yaw components of the drone, the drone should be able to hover almost still, especially in the roll and Z directions, which aren't controlled by software.</p>
 			<img src="images/IMG_2041.jpg" class="projectPageImage rotateImg mx-auto d-block">
