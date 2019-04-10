@@ -50,10 +50,11 @@
 					<li> Get drone to fly, decide I want to make this thing follow faces </li>
 					<li> Code face detection program in Python, then in C++ </li>
 					<li> Switch to detection of objects instead of faces because face detection can't run in real time on a Pi</li>
-					<li> Start testing and tuning stuff (now) </li>
+					<li> Get algorithm to work on ARDrone </li>
 			</p>
 			<h3> Overview </h3>
 			<p> Code and CAD models for this project are<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a>.</p>
+            <p> The ROS package for the ARDrone is <a href="https://github.com/KyleJosling/ardrone-object-tracking">here</a></p>
 			<p>After I decided to build a drone from scratch using an Arduino UNO as the flight controller, I decided to take on a bit more of a challenge. I used a Raspberry Pi with OpenCV for the computer vision component of the project. I used serial communication
 				to interface the Raspberry Pi and (now) a BetaFlight flight controller, which is much more stable than the Arduino was. The Raspberry Pi detects and objects and sends the position to the flight controller via the Multiwii Serial Protocol. Based on the position of object in the frame, PID controllers move the drone so as to place the object in the
 				middle of the image frame, at a certain distance away. </p>
@@ -64,9 +65,12 @@
 			<li>BetaFlight flight controller</li>
 			<li>Raspberry Pi </li>
 			<li>CAD and 3D printing</li>
+			<li>ROS</li>
 			<br>
 			<h2> Project Log</h2>
-			<h3> AR Drone and knowing when to give up (for now) (2/4/2018) </h3>
+			<h3> IT WORKS (4/9/2019) </h3>
+            <p> Oh baby, it works. After a struggling a bit, I fixed some software bugs and tuned the PID controllers, and it works (dare I even say it) WELL. I'll have a video up soon, but I'm happy to finally validate my algorithm in real life and see an end result. I have some ideas for more things I could add to this project, but I'm going to focus on other ones for now. </p>
+			<h3> AR Drone (2/4/2019) </h3>
 			<p> Since it started snowing, haven't been able to test the drone a lot since November. In the meantime though, I bought an AR drone. I plan on implementing the same object tracking algorithm using their API. The AR drone removes the difficulties of achieving a stable hover and lets me focus on the image processing and tracking algorithms. After I'm done doing that, I may shelve this project for now. </p>
 			<p> I don't think this project was a waste of time. But when I started it almost two years ago, I had no idea how much work it would entail. I barely knew anything about control systems for UAVs, computer vision, embedded systems, 3D printing or multithreaded programs. I don't think I fully grasped how challenging a project like this was. My attitude was to build everything from scratch and essentially reinvent the wheel with this project (I built a <b>flight controller</b> from scratch!) At this point I've realised that to make this drone truly autonomous, I'll probably need more sensors - an optical flow sensor to keep the drone at a stable hover, as well as implementing an ultrasonic sensor and probably getting a new flight controller. This will probably cost 100s of dollars. </p>
          <p> I guess what I'm trying to say is as time went on, this project went from being a passion of mine to a burden I always had on my shoulders. I spent a lot of time and money on it, so I wanted to finish it. When we are growing up, we are always told to never give up, but I don't think that statement always rings true. I started this project to learn, and I learned so much! I want to put my time into other projects that I'm more passionate about right now. </p>
