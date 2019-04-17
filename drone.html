@@ -45,8 +45,8 @@
 			<p> Create an autonomous drone from scratch that can detect and follow coloured objects.</p>
 
 			<h3> Overview </h3>
-			<p> Code and CAD models for this project are<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a>.</p>
-            <p> The ROS package for the ARDrone is <a href="https://github.com/KyleJosling/ardrone-object-tracking">here</a></p>
+			<p> Code and CAD models for this project are<a href="https://github.com/KyleJosling/drone-with-facial-detection"> here</a></p>
+            <p> The ROS package for the ARDrone is <a href="https://github.com/KyleJosling/ardrone_object_tracking">here</a></p>
 			<p>After I decided to build a drone from scratch using an Arduino UNO as the flight controller, I decided to take on a bit more of a challenge. I used a Raspberry Pi with OpenCV for the computer vision component of the project. I used serial communication
 				to interface the Raspberry Pi and (now) a BetaFlight flight controller, which is much more stable than the Arduino I was using before was. The Raspberry Pi detects and objects and sends the position to the flight controller via the Multiwii Serial Protocol. Based on the position of object in the frame, PID controllers move the drone so as to place the object in the
 				middle of the image frame, at a certain distance away. </p>
