@@ -44,8 +44,9 @@
 			<h3> Goal </h3>
             <p> Make a custom wordclocks with my family member's names on them. </p>
 			<h3> Overview </h3>
-			<p> This year for Christmas I made these custom wordclocks for my family members. It was journey and a half. I layed a custom cut vinyl sticker over class inside an Ikea Ribba frame. I then designed and 3D printed a baffling to isolate each LED. I made an array of individual addressable RGB leds and placed them in the baffles.</p>
-<p> The whole thing was driven using an Arduino and a real time clock module. I programmed the Arduino to display different times based on the time of the day. The code will be available on Github soon. I learned so much during this project and got a lot of interest for custom ones, so I decided to run with this a little bit. I designed an LED controller that I'm getting manufactured right now.</p> 
+			<p> This year for Christmas I made these custom wordclocks for my family members. I layed a custom cut vinyl sticker over class inside an Ikea Ribba frame. I then designed and 3D printed a baffling to isolate each LED. I made an array of individual addressable RGB leds and placed them in the baffles.</p>
+<p> The whole thing was driven using an Arduino and a real time clock module. I programmed the Arduino to display different times based on the time of the day. I was not happy with my Arduino, which was a little primitive - so I 
+designed an LED controller using Eagle PCB and got the design manufactured.</p> 
 			
 			<h3> Technologies Used </h3>
 			<li>PCB Design</li>
@@ -54,6 +55,12 @@
 			<br>
 
 <h2> Project Log</h2>
+<h3> It Works (8/27/2020) </h3>
+<p> Yeah, so I haven't really worked on this for a while, but I decided to order a second PCB revision with more decoupling caps, a proper linear regulator.. etc. And the bootloader loaded! But I couldn't program it over USB. 
+Turns out, I forgot to add another cap between the reset pin on the Atmega328 and the DTR pin on the FTDI USB to serial chip. So I ordered another PCB (for the third time) and voila! A working LED controller, with a real
+time clock and a linear regulator on board.</p>
+    <img src="images/rev2.jpg" class="projectPageImage">
+    <img src="images/rev3.jpg" class="projectPageImage">
 <h3> It Doesn't Work (3/23/2019) </h3>
 <p> So I soldered up the PCB and had trouble loading the bootloader. I looked at the board layout and made a few really glaring mistakes that would cause problems. I'm really impressed with myself for hand soldering components this small though. Time to do another board spin. Going to try to order the PCB sometime within the next week. I'm also working on another wordclock, so I'm going to make a section for the build process here.</p>
     <img src="images/IMG_2307.jpg" class="projectPageImage">
